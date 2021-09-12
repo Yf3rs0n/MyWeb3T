@@ -1,0 +1,114 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*Tipo de letra*/
+    font-size: 110%;
+}
+h1{
+    color: red;
+    text-align: center;
+}
+.titulo3 {
+    border-bottom: 4.5px #DA0037 solid;
+    text-align: center;
+}
+
+#identificador3 {
+    border-bottom: 2px purple dashed;
+}
+
+/**/
+article p {
+    color: black;
+}
+section, div, #nieto {
+    text-align: center;
+}
+/*Boton Home*/
+a {
+    margin: 10px;
+    padding: 12px;
+    
+}
+a:link {
+    outline: none;
+    text-decoration: none;
+}
+a:visited {
+    color: #DA0037;
+}
+a:hover{
+    border: 2px black solid;
+    color: black;
+}
+a:active{
+    border: 1px #DA0037 solid;
+    color:#DA0037;
+}
+/*letras */
+p::first-letter {
+    font-size: 30px;
+    color: red;
+}
+p::first-line {
+    font-style: italic;
+    
+}
+/*p::selection {
+    background-color:;
+    color:;
+}
+*/
+[class^="color"] {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-left: 5px red solid;
+}
+
+/*Listas*/
+#listas {
+    counter-reset: li; 
+    *list-style: decimal; 
+    font: 25px;
+    padding: 0;
+    margin-bottom: 4em;
+}
+
+#listas li{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;/*tamaño en puntos de la letra que se está utilizando.*/
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+}
+
+#listas li:hover{
+    background: #eee;
+}   
+
+#listas li:before{
+    content: counter(li);/*contador*/
+    counter-increment: li;/*contador li*/
+    position: absolute; 
+    left: -2.5em;/*Posicion del contenedor*/
+    top: 50%;/*contenedor de los numeros se alinia con el li*/
+    margin-top: -1em;
+    background: #c4161f;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+/*posicionamiento de la flecha */
+#listas li:after{
+    position: absolute; 
+    content: '';/*flecha*/
+    border: .5em solid transparent;/*para establecer el ancho, el estilo y el color del borde*/
+    left: -1em;
+    top: 50%;/*posicio de lugar en que sale la fleha*/
+    margin-top: -.5em;/*Propiedad abreviada para establecer valores el grosor del área del margen.*/
+    transition: all .3s ease-out;               
+}
+
+#listas li:hover:after{/*Especifica hasta qué punto el borde del margen izquierdo de cuadro se desplaza a la derecha del*/
+    left: -.5em;
+    border-left-color: #c4161f;             
+}
